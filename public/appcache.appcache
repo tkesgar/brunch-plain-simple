@@ -1,0 +1,20 @@
+CACHE MANIFEST
+# 8ef6db9f659bfa2f87a71c6531be7251812fa635
+
+NETWORK:
+*
+
+FALLBACK:
+
+
+CACHE:
+./css\lib.css
+./css\lib.css.map
+./fonts\glyphicons-halflings-regular.eot
+./fonts\glyphicons-halflings-regular.svg
+./fonts\glyphicons-halflings-regular.ttf
+./fonts\glyphicons-halflings-regular.woff
+./fonts\glyphicons-halflings-regular.woff2
+./index.html
+./js\lib.js
+./js\lib.js.map
