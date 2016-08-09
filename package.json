@@ -1,6 +1,6 @@
 {
   "name": "brunch-plain-simple",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A minimalistic, plain, and customizable Brunch skeleton.",
   "scripts": {
     "start": "brunch watch --server",
