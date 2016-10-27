@@ -1,3 +1,8 @@
+// ---------------------------------------------------------------------------
+// Modified from Redux Todo List Example
+// Source: http://redux.js.org/docs/basics/ExampleTodoList.html
+// ---------------------------------------------------------------------------
+
 import React from 'react'
 import FilterLink from '../containers/FilterLink'
 

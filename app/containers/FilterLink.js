@@ -1,3 +1,8 @@
+// ---------------------------------------------------------------------------
+// Modified from Redux Todo List Example
+// Source: http://redux.js.org/docs/basics/ExampleTodoList.html
+// ---------------------------------------------------------------------------
+
 import { connect } from 'react-redux'
 import { setVisibilityFilter } from '../actions'
 import Link from '../components/Link'

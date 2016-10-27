@@ -1,15 +1,41 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import todoApp from './reducers'
+import { createStore, applyMiddleware, compose } from 'redux'
+
+import reducer from './reducers'
+
 import App from './components/App'
 
-let store = createStore(todoApp)
+// ---------------------------------------------------------------------------
+// Redux
+// ---------------------------------------------------------------------------
 
-render(
+// Redux store middlewares
+const middlewares = [
+  // Insert redux middlewares here
+]
+
+// Redux store enhancer
+let enhancer
+if ('BRUNCH_ENVIRONMENT' === 'development') {
+  // Development: Use Redux DevTools extension if available
+  let dev = window.devToolsExtension ? window.devToolsExtension() : f => f
+  enhancer = compose(applyMiddleware(...middlewares), dev)
+} else {
+  // Production
+  enhancer = applyMiddleware(...middlewares)
+}
+
+// Redux store
+const store = createStore(reducer, enhancer)
+
+// ---------------------------------------------------------------------------
+// Render React
+// ---------------------------------------------------------------------------
+
+render((
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById('root')
-)
+  </Provider>
+), document.getElementById('app'))

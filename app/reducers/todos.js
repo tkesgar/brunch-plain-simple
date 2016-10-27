@@ -1,3 +1,8 @@
+// ---------------------------------------------------------------------------
+// Modified from Redux Todo List Example
+// Source: http://redux.js.org/docs/basics/ExampleTodoList.html
+// ---------------------------------------------------------------------------
+
 const todo = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_TODO':

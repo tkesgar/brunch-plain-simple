@@ -1,19 +1,36 @@
 {
   "name": "brunch-plain-simple",
   "version": "0.3.0",
-  "description": "A minimalistic, plain, and customizable Brunch skeleton",
-  "main": "index.js",
+  "description": "Minimalistic, plain, and customizable single-page-app skeleton",
+  "private": true,
+  "main": "server.js",
   "scripts": {
-    "watch": "brunch w -s",
+    "watch:server": "nodemon server.js --ignore public/ --ignore app/",
+    "watch:app": "brunch watch",
+    "watch": "npm-run-all --parallel watch:*",
+    "test": "mocha",
     "clean": "del-cli public/** !public",
-    "build": "brunch b -p",
-    "start": "node index.js"
+    "build": "brunch build --production && del-cli public/test**",
+    "dploy:install": "dploy install",
+    "dploy": "dploy",
+    "all": "npm-run-all clean build dploy"
+  },
+  "engines": {
+    "node": ">=5.11.0",
+    "npm": ">=3.1.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tkesgar/brunch-plain-simple.git"
   },
-  "author": "Ted Kesgar <t.kesgar@live.com>",
+  "bugs": {
+    "url": "https://github.com/tkesgar/brunch-plain-simple/issues",
+    "email": "t.kesgar@live.com"
+  },
+  "author": "Ted Kesgar <t.kesgar@live.com> (https://tkesgar.com)",
+  "contributors": [
+    "Ted Kesgar <t.kesgar@live.com> (https://tkesgar.com)"
+  ],
   "license": "MIT",
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
@@ -21,20 +38,28 @@
     "babel-preset-latest": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "brunch": "^2.8.2",
+    "chai": "^3.5.0",
     "clean-css-brunch": "^2.0.0",
     "css-brunch": "^2.6.1",
     "del-cli": "^0.2.0",
+    "dploy": "^1.2.0",
+    "environment-brunch": "^1.0.0",
     "javascript-brunch": "^2.0.0",
+    "json-brunch": "^1.5.4",
     "less-brunch": "^2.7.1",
+    "markdown-brunch": "^1.7.2",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.10.2",
+    "npm-run-all": "^3.1.0",
     "postcss-brunch": "^0.5.0",
     "postcss-cssnext": "^2.8.0",
-    "postcss-font-magician": "^1.4.0",
-    "uglify-js-brunch": "^2.0.1"
-  },
-  "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "uglify-js-brunch": "^2.0.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
   }
 }
