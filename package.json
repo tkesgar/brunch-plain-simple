@@ -1,6 +1,6 @@
 {
   "name": "brunch-plain-simple",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Minimalistic, plain, and customizable single-page-app skeleton",
   "private": true,
   "main": "server.js",
