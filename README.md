@@ -1,10 +1,10 @@
 # brunch-plain-simple
 
+**DEPRECATED: I am not currently using this boilerplate anymore. Most dependencies will be outdated, so if you still want to use this boilerplate, you need to upgrade the dependencies.**
+
 This is a minimalistic, plain, and customizable single-page app skeleton built using Brunch.
 
 The aim is to provide a versatile server-client skeleton repository that I can simply use without too many extra configuration, yet still easy enough to configure if I want something different or something more.
-
-This repository is served using Heroku at https://brunch-plain-simple.herokuapp.com.
 
 ## What's Inside
 
