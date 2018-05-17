@@ -1,6 +1,6 @@
 # brunch-plain-simple
 
-**DEPRECATED: I am not currently using this boilerplate anymore. Most dependencies will be outdated, so if you still want to use this boilerplate, you need to upgrade the dependencies.**
+> **DEPRECATED**: I am not currently using this boilerplate anymore. Most dependencies will be outdated, so if you still want to use this boilerplate, you need to upgrade the dependencies.
 
 This is a minimalistic, plain, and customizable single-page app skeleton built using Brunch.
 
